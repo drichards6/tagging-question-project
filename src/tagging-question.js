@@ -10,57 +10,104 @@ export class TaggingQuestion extends DDD {
   constructor() {
     super();
     this.img = "https://lumiere-a.akamaihd.net/v1/images/ct_frozen_elsa_18466_22a50822.jpeg";
-    this.instructions= "let it go !";
+    this.question= "let it go !";
   }
   
   static get styles() {
     return [
       super.styles,
       css`
-      :host {
-        display: flex;
-      }
+        :host {
+            display: flex;
+        }
 
-      .tagging-question-container {
-        border: 1px solid black;
-        height: 95vh;
-        width:  95vw;
-        margin: var(--ddd-spacing-10);
-        
-      }
+        .tagging-question-container {
+            border: 2px solid var(--ddd-theme-default-limestoneGray);
+            height: 95vh;
+            width:  95vw;
+            margin: var(--ddd-spacing-10);
+            border-radius: 1%;
+            padding: var(--ddd-spacing-5);
+        }
 
-      .img-container {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50vh;
-        width: 50vw;
-        justify-content: center;
-      }
+        .img-container {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            height: 50vh;
+            width: 50vw;
+            justify-content: center;
+        }
 
-    .instruction-container {
-        text-align: center;
-    }
+        .img-container img {
+            border: 3px solid var(--ddd-theme-default-limestoneGray);
+        }
 
-    .check-answers-btn {
-        background-color: var(--ddd-theme-default-potential70);
-        color: var(--ddd-theme-default-slateMaxLight);
-    }
+        .question-container {
+            text-align: center;
+        }
 
-    .check-answers-btn:focus,
-    .check-answers-btn:hover {
-        background-color: var(--ddd-theme-default-creekTeal);
-        color: var(--ddd-theme-default-coalyGray);
-    }
+        .check-answers-btn {
+            background-color: var(--ddd-theme-default-creekLight);
+            color: var(--ddd-theme-default-coalyGray);
+            padding: var(--ddd-spacing-12) var(--ddd-spacing-6);
+            margin: var(--ddd-spacing-0) var(--ddd-spacing-1);
+            font-size: 16px;
+        }
 
-    .option-container {
-        border: 1px solid grey;
-        width: 80vw;
-        overflow: auto;
-        white-space: nowrap;
-        display: flex;
-        flex-direction: row;
-    }
+        .check-answers-btn:focus,
+        .check-answers-btn:hover {
+            background-color: var(--ddd-theme-default-creekTeal);
+            color: var(--ddd-theme-default-coalyGray);
+        }
+
+        .option-container {
+            border: 2px dotted grey;
+            max-width: 80vw;
+            overflow: auto;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: row;
+            padding: var(--ddd-spacing-1);
+            margin: var(--ddd-spacing-1);
+        }
+
+        .answer-container {
+            display: flex;
+            background-color: var(--ddd-theme-default-limestoneGray);
+            border: 2px solid var(--ddd-theme-default-coalyGray);
+            max-width: 80vw;
+            overflow: auto;
+            white-space: nowrap;
+            flex-direction: row;
+            margin: var(--ddd-spacing-1);
+            padding: var(--ddd-spacing-1);
+        }
+
+        .drop-box {
+            display: flex;
+            border: 1px solid var(--ddd-theme-default-coalyGray);
+            padding: var(--ddd-spacing-2);
+            background-color: var(--ddd-theme-default-slateMaxLight);
+            max-width: 410px;
+            overflow: auto;
+            white-space: nowrap;
+            flex-direction: row;
+        }
+
+        .option-container .option-tag {
+            border: 4px solid var(--ddd-theme-default-discoveryCoral);
+            color: var(--ddd-theme-default-original87Pink);
+            padding: var(--ddd-spacing-5);
+            margin: var(--ddd-spacing-2);
+        }
+
+        .answer-container .option-tag {
+            border: 4px solid var(--ddd-theme-default-opportunityGreen);
+            color: var(--ddd-theme-default-futureLime);
+            padding: var(--ddd-spacing-5);
+            margin: var(--ddd-spacing-2);
+        }
 
     `];
   }
@@ -71,18 +118,29 @@ export class TaggingQuestion extends DDD {
             <div class="img-container">
                 <img class="img" src="${this.img}">
             </div> <!--end img-container div-->
-            <div class="instruction-container">
-                <p><strong>${this.instructions}</strong></p>
+            <div class="question-container">
+                <p><strong>${this.question}</strong></p>
             </div> <!--end instruction-container div-->
             <div class="option-container">
-                <p>this is where the option bank of tags will be displayed</p>
+                <div class="option-tag"><strong>Option 1</strong></div>
+                <div class="option-tag"><strong>Option 2</strong></div>
+                <div class="option-tag"><strong>Option 3</strong></div>
+                <div class="option-tag"><strong>Option 4</strong></div>
+                <div class="option-tag"><strong>Option 5</strong></div>
             </div> <!--end option-container div-->
             <div class="answer-container">
-                <p>this is where the answer tags will be displayed</p>
+                <div class="drop-box">
+                <div class="option-tag"><strong>Option 1</strong></div>
+                <div class="option-tag"><strong>Option 2</strong></div>
+                <div class="option-tag"><strong>Option 3</strong></div>
+                <div class="option-tag"><strong>Option 4</strong></div>
+                <div class="option-tag"><strong>Option 5</strong></div>
+                </div>
+                <div class="check-button-container">
+                    <button class="check-answers-btn"><strong>Check Answers</strong></button>
+                </div>
             </div> <!--end answer-container div-->
-            <div class="check-button-container">
-                <button class="check-answers-btn">Check Answers</button>
-            </div> <!--end check-button-container div-->
+             <!--end check-button-container div-->
         </div> <!--end tagging-question-container div-->
     `;
   }
@@ -92,7 +150,7 @@ export class TaggingQuestion extends DDD {
     return {
       ...super.properties,
       img: { type: String },
-      instructions: { type: String },
+      question: { type: String },
     }
   }
 
