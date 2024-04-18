@@ -22,7 +22,7 @@ export class TaggingQuestion extends DDD {
         }
 
         .tagging-question-container {
-            border: 2px solid var(--ddd-theme-default-limestoneGray);
+            border: 2px solid var(--ddd-theme-default-navy40);
             height: 95vh;
             width:  95vw;
             margin: var(--ddd-spacing-10);
@@ -40,7 +40,7 @@ export class TaggingQuestion extends DDD {
         }
 
         .img-container img {
-            border: 3px solid var(--ddd-theme-default-limestoneGray);
+            border: 3px solid var(--ddd-theme-default-navy40);
         }
 
         .question-container {
@@ -62,31 +62,32 @@ export class TaggingQuestion extends DDD {
         }
 
         .option-container {
-            border: 2px dotted grey;
+            border: 2px dotted var(--ddd-theme-default-navy80);
             max-width: 80vw;
             overflow: auto;
             white-space: nowrap;
             display: flex;
             flex-direction: row;
             padding: var(--ddd-spacing-1);
-            margin: var(--ddd-spacing-1);
+            margin: var(--ddd-spacing-2) var(--ddd-spacing-1);
+            background-color: var(--ddd-theme-default-navy60);
         }
 
         .answer-container {
             display: flex;
-            background-color: var(--ddd-theme-default-limestoneGray);
-            border: 2px solid var(--ddd-theme-default-coalyGray);
+            background-color: var(--ddd-theme-default-navy60);
+            border: 2px solid var(--ddd-theme-default-navy80);
             max-width: 80vw;
             overflow: auto;
             white-space: nowrap;
             flex-direction: row;
-            margin: var(--ddd-spacing-1);
+            margin: var(--ddd-spacing-2) var(--ddd-spacing-1);
             padding: var(--ddd-spacing-1);
         }
 
         .drop-box {
             display: flex;
-            border: 1px solid var(--ddd-theme-default-coalyGray);
+            border: 1px solid var(--ddd-theme-default-navy80);
             padding: var(--ddd-spacing-2);
             background-color: var(--ddd-theme-default-slateMaxLight);
             max-width: 410px;
@@ -100,6 +101,7 @@ export class TaggingQuestion extends DDD {
             color: var(--ddd-theme-default-original87Pink);
             padding: var(--ddd-spacing-5);
             margin: var(--ddd-spacing-2);
+            background-color: var(--ddd-theme-default-white);
         }
 
         .answer-container .option-tag {
@@ -107,6 +109,20 @@ export class TaggingQuestion extends DDD {
             color: var(--ddd-theme-default-futureLime);
             padding: var(--ddd-spacing-5);
             margin: var(--ddd-spacing-2);
+            background-color: var(--ddd-theme-default-white);
+        }
+
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 7px;
+            border: 1px solid grey;
+            background-color: var(--ddd-theme-default-limestoneMaxLight);
+        }
+
+      ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: var(--ddd-theme-default-navy40);
+            -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
         }
 
     `];
