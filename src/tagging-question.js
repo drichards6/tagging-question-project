@@ -130,10 +130,6 @@ export class TaggingQuestion extends DDD {
     `];
   }
 
-  updated() {
-    
-  }
-
   render() {
     return html `
         <div class="tagging-question-container">
