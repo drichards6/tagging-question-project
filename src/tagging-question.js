@@ -11,6 +11,8 @@ export class TaggingQuestion extends DDD {
     super();
     this.img = "https://lumiere-a.akamaihd.net/v1/images/ct_frozen_elsa_18466_22a50822.jpeg";
     this.question= "let it go !";
+    this.availableOptions = [];
+    this.guess = [];
   }
   
   static get styles() {
@@ -70,12 +72,12 @@ export class TaggingQuestion extends DDD {
             flex-direction: row;
             padding: var(--ddd-spacing-1);
             margin: var(--ddd-spacing-2) var(--ddd-spacing-1);
-            background-color: var(--ddd-theme-default-navy60);
+            background-color: var(--ddd-theme-default-slateMaxLight);
         }
 
         .answer-container {
             display: flex;
-            background-color: var(--ddd-theme-default-navy60);
+            background-color: var(--ddd-theme-default-slateLight);
             border: 2px solid var(--ddd-theme-default-navy80);
             max-width: 80vw;
             overflow: auto;
@@ -128,6 +130,10 @@ export class TaggingQuestion extends DDD {
     `];
   }
 
+  updated() {
+    
+  }
+
   render() {
     return html `
         <div class="tagging-question-container">
@@ -138,19 +144,19 @@ export class TaggingQuestion extends DDD {
                 <p><strong>${this.question}</strong></p>
             </div> <!--end instruction-container div-->
             <div class="option-container">
-                <div class="option-tag"><strong>Option 1</strong></div>
-                <div class="option-tag"><strong>Option 2</strong></div>
-                <div class="option-tag"><strong>Option 3</strong></div>
-                <div class="option-tag"><strong>Option 4</strong></div>
-                <div class="option-tag"><strong>Option 5</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 1</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 2</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 3</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 4</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 5</strong></div>
             </div> <!--end option-container div-->
             <div class="answer-container">
                 <div class="drop-box">
-                <div class="option-tag"><strong>Option 1</strong></div>
-                <div class="option-tag"><strong>Option 2</strong></div>
-                <div class="option-tag"><strong>Option 3</strong></div>
-                <div class="option-tag"><strong>Option 4</strong></div>
-                <div class="option-tag"><strong>Option 5</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 1</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 2</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 3</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 4</strong></div>
+                <div class="option-tag" draggable="true"><strong>Option 5</strong></div>
                 </div>
                 <div class="check-button-container">
                     <button class="check-answers-btn"><strong>Check Answers</strong></button>
@@ -167,6 +173,8 @@ export class TaggingQuestion extends DDD {
       ...super.properties,
       img: { type: String },
       question: { type: String },
+      availableOptions: { type: Array },
+      guess: { type: Array },
     }
   }
 
