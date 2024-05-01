@@ -1,0 +1,147 @@
+{
+    "default": {
+      "tagChoices": [
+        "default btn",
+        "default btn"
+      ],
+      "tagAnswers": [
+        {
+          "default btn - true": {
+            "correct": true,
+            "feedback": "default feedback option true"
+          }
+        },
+        {
+          "default btn - false": {
+            "correct": false,
+            "feedback": "default feedback option false"
+          }
+        }
+      ]
+    },
+  
+  
+    "haxLogo": {
+      "tagChoices": [
+        "good form",
+        "poor taste",
+        "contrasting themes",
+        "AI",
+        "shading",
+        "original work",
+        "accessible"
+      ],
+      "tagAnswers": [
+        {
+          "good form": {
+            "correct": true,
+            "feedback": "The shape of the vase clearly demonstrates craftsmanship."
+          }
+        },
+        {
+          "poor taste": {
+            "correct": false,
+            "feedback": "Taste is in the eye of the designer as well as the viewer."
+          }
+        },
+        {
+          "contrasting themes": {
+            "correct": false,
+            "feedback": "There is uniformity in the shape, but there is no depth to this media to imply that it is contrasting with other figures."
+          }
+        },
+        {
+          "AI": {
+            "correct": true,
+            "feedback": "While a modification of prior work, this is still AI generative work."
+          }
+        },
+        {
+          "shading": {
+            "correct": false,
+            "feedback": "While there is a light source and a shadow cast, shading is a term used for pencil based sketching."
+          }
+        },
+        {
+          "original work": {
+            "correct": false,
+            "feedback": "Artwork created from generative AI can not be original since it is trained on other artists' work."
+          }
+        },
+        {
+          "accessible": {
+            "correct": false,
+            "feedback": "The color scheme while high contrast in some areas, loses form in others and has written text unrelated to the character."
+          }
+        }
+      ]
+    },
+  
+  
+    "elsa": {
+      "tagChoices": [
+        "hair is black",
+        "eyes are green",
+        "jacket is red",
+        "is disney character",
+        "image is in black and white",
+        "princess",
+        "eyes are blue",
+        "wearing makeup",
+        "very pale",
+        "has a friend named olaf"
+      ],
+      "tagAnswers": [
+        {
+        "hair is black": {
+            "correct": false,
+            "feedback": "Her hair is blonde!"
+        }},
+        {
+        "eyes are green": {
+            "correct": false,
+            "feedback": "Her eyes are blue."
+        }},
+        {
+        "jacket is red": {
+            "correct": false,
+            "feedback": "Her jacket is light blue, not red."
+        }},
+        {
+        "is disney characted": {
+            "correct": true,
+            "feedback": "Elsa is a character who first appeared in Disney's movie, Frozen!"
+        }},
+        {
+        "image is in black and white": {
+            "correct": false,
+            "feedback": "The image has an array of colors present in it."
+        }},
+        {
+        "princess": {
+            "correct": false,
+            "feedback": "Elsa is a Queen."
+        }},
+        {
+        "eyes are blue": {
+            "correct": true,
+            "feedback": "Her eyes are blue!"
+        }},
+        {
+          "wearing makeup": {
+              "correct": true,
+              "feedback": "She is wearing makeup!"
+        }},
+        {
+          "very pale": {
+              "correct": true,
+              "feedback": "She definitely is not tan."
+        }},
+        {
+          "has a friend named olaf": {
+              "correct": true,
+              "feedback": "He is a great friend indeed."
+        }}
+      ]
+    }
+}

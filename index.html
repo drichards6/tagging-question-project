@@ -16,15 +16,78 @@
       font-family: sans-serif;
       background-color: #ededed;
     }
+
+    p {
+      margin: 0px 20px;
+      padding: 0px 20px;
+    }
+
+    h1 {
+      margin: 0px 20px;
+      padding: 0px 20px;
+    }
     
   </style>
   <title>polaris-chip / my-card</title>
 </head>
 
 <body>
-  <h1>Tagging Question
-  </h1>
-  <tagging-question></tagging-question>
+  <h1>Tagging Question</h1>
+
+  <p>The snow glows white on the mountain tonight
+    Not a footprint to be seen
+    A kingdom of isolation
+    And it looks like I'm the queen
+    The wind is howling like this swirling storm inside
+    Couldn't keep it in, heaven knows I tried
+    Don't let them in, don't let them see
+    Be the good girl you always have to be
+    Conceal, don't feel, don't let them know
+    Well, now they know
+    Let it go, let it go
+    Can't hold it back anymore
+    Let it go, let it go
+    Turn away and slam the door
+    I don't care what they're going to say
+    Let the storm rage on
+    The cold never bothered me anyway
+    It's funny how some distance makes everything seem small
+    And the fears that once controlled me can't get to me at all
+    It's time to see what I can do
+    To test the limits and break through
+    No right, no wrong, no rules for me
+    I'm free
+    Let it go, let it go
+    I am one with the wind and sky
+    Let it go, let it go
+    You'll never see me cry
+    Here I stand and here I stay
+    Let the storm rage on
+    My power flurries through the air into the ground
+    My soul is spiraling in frozen fractals all around
+    And one thought crystallizes like an icy blast
+    I'm never going back, the past is in the past
+    Let it go, let it go
+    And I'll rise like the break of dawn
+    Let it go, let it go
+    That perfect girl is gone
+    Here I stand in the light of day
+    Let the storm rage on
+    The cold never bothered me anyway</p>
+  <tagging-question 
+  class="tagging-question"
+  question="Which of these options describe the picture above?"
+  img="https://lumiere-a.akamaihd.net/v1/images/ct_frozen_elsa_18466_22a50822.jpeg"
+  answerKey="elsa"></tagging-question>
+
+  <p class="base-text">A radically simple approach to web authoring and content ownership.
+
+    HAX is built on the premise that any and everyone should be able to create rich, engaging content without the need for complex platforms, installations or vendor lock-in. The HAX block system allows for sustainable content creation that is easy to click and build for novices while outputting clean, semantic HTML for experts.</p>
+  <tagging-question 
+  class="tagging-question"
+  question="Which of these options describe the picture above?"
+  img="haxlogo.png"
+  answerKey="haxLogo"></tagging-question>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/tagging-question.js"></script>
